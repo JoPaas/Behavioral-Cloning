@@ -13,13 +13,25 @@ My project includes the following files:
 * normal_track.mp4 a video of one lap of the normal track
 * mountain_track.mp4 a video of one lap of the mountain track
 
+[//]: # (Image References)
+
+[image1]: ./examples/normal_tack_drive.jpg 'Normal Track Center'
+[image2]: ./examples/mountain_track_drive.jpg 'Mountain Track Right
+[image3]: ./examples/center.jpg 'Center Camera'
+[image4]: ./examples/left.png 'Left Camera'
+[image5]: ./examples/right.png 'Right Camera'
+[image6]: ./examples/right_lane.png 'Right Lane'
+[image6]: ./examples/center_cropped.png 'Center Image Cropped'
+
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```
 python drive.py model.h5
 ```
 
-On the normal track the car keeps to the center of the track and on the mountain track it keeps mostly on tie right lane, only in some sharp corners it briefly crosses the dashed center line. It never drives across the solid lines at the edges of the road though.
+On the normal track the car keeps to the center of the track and on the mountain track it keeps mostly on tie right lane, only in some sharp corners it briefly crosses the dashed center line. It never drives across the solid lines at the edges of the road though. The following images show scenes from the autonomous driving mode.
+
+![alt text][image1] ![alt text][image2]
 
 #### 3. Submission code is usable and readable
 
@@ -32,7 +44,9 @@ The model.py file contains the code for training and saving the convolution neur
 My model consists of a convolution neural network inspired from NVIDIAS solution for a end-to-end CNN that predicts steering angles from camera images. It uses three convolutional layers with 5x5 and two with 3x3 filter sizes and depths between 24 and 64 (model.py lines 85-95).
 After those there are in total four fully connected layers to get the linear steering angle from the last convolutions output.
 
-The model includes RELU layers to introduce nonlinearity (code lines 85-87), and the data is normalized in the model using a Keras lambda layer (code line 82). Also the inpus are cropped to get rid of the sky and far away landscape as well as the hood of the vehicle (code line 83). 
+The model includes RELU layers to introduce nonlinearity (code lines 85-87), and the data is normalized in the model using a Keras lambda layer (code line 82). Also the inpus are cropped to get rid of the sky and far away landscape as well as the hood of the vehicle (code line 83). The following images show the cropping.
+
+![alt text][image3] ![alt text][image6]
 
 #### 2. Attempts to reduce overfitting in the model
 
@@ -64,7 +78,9 @@ The final model architecture is three convolutions with 5x5 filter sizes, stride
 
 To capture the correct behavior I recorded forward and reverse laps, as well as some recovery maneuvers. also I recorded a lap of the challenge track, which presumably helps with sharper corners. I was worried that since on the challenge track I drove on the right lane this would also influence the cars behaviour on the normal track, but it worked. Probably the network is able to recognize the type of track.
 
-After the collection process, I had 5.200 number of data points. I then preprocessed this data by extracting the left and right images and adding an offset of +-0.15 to the current steering angle. I found this value to work well compared to 0.1 and up to 0.25.
+After the collection process, I had 5.200 number of data points. I then preprocessed this data by extracting the left and right images and adding an offset of +-0.15 to the current steering angle. I found this value to work well compared to 0.1 and up to 0.25. the following pictures show left, center and right image of the same scene.
+
+![alt text][image4] ![alt text][image3] ![alt text][image5]
 
 I finally randomly shuffled the data set and put 10% of the data into a validation set, since the dataset is rather large.
 
