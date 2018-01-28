@@ -13,14 +13,12 @@ My project includes the following files:
 * normal_track.mp4 a video of one lap of the normal track
 * mountain_track.mp4 a video of one lap of the mountain track
 
-[//]: # (Image References)
-
-[image1]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/normal_tack_drive.jpg 'Normal Track Center'
-[image2]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/mountain_track_drive.jpg 'Mountain Track Right
-[image3]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/center.jpg 'Center Camera'
-[image4]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/left.jpg 'Left Camera'
-[image5]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/right.jpg 'Right Camera'
-[image6]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/center_cropped.jpg 'Center Image Cropped'
+[image1]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/normal_tack_drive.jpg "Normal Track Center"
+[image2]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/mountain_track_drive.jpg "Mountain Track Right"
+[image3]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/center.jpg "Center Camera"
+[image4]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/left.jpg "Left Camera"
+[image5]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/right.jpg "Right Camera"
+[image6]: https://github.com/Nervehurter/Behavioral-Cloning/blob/master/examples/center_cropped.jpg "Center Image Cropped"
 
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
